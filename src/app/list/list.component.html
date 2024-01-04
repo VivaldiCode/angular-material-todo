@@ -1,0 +1,10 @@
+<ul>
+  <li *ngFor="let todo of todos" [class.completed]="todo.completed" appDraggable>
+    <label>
+      <input type="radio" [(ngModel)]="todo.completed">
+      <del *ngIf="todo.completed">{{ todo.text }}</del>
+      <span *ngIf="!todo.completed">{{ todo.text }}</span>
+    </label>
+    <button (click)="onDeleteTodoClick(todo)">Delete</button>
+  </li>
+</ul>

@@ -1,0 +1,7 @@
+<header>
+  <h1>TODO</h1>
+  <button (click)="toggleDarkMode()" mat-fab aria-label="Example icon button with a delete icon">
+    <img *ngIf="!darkMode" ngSrc="/assets/icon-moon.svg" alt="on" height="26" width="26"/>
+    <img *ngIf="darkMode" ngSrc="/assets/icon-sun.svg" alt="on" height="26" width="26"/>
+  </button>
+</header>

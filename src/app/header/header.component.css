@@ -1,0 +1,11 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+
+header h1 {
+  width: 300px;
+  font-weight: 700;
+  letter-spacing: 7px;
+}

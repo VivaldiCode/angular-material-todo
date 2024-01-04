@@ -1,0 +1,36 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+
+}
+
+.darkMode {
+  background: #171723 url("/assets/bg-desktop-dark.jpg") no-repeat top center;
+  color: #FAFAFA;
+}
+
+.lightMode {
+  background: #FAFAFA url("/assets/bg-desktop-light.jpg") no-repeat top center;
+  color: #171723
+}
+
+.content {
+  width: 50vw;
+}
+
+@media only screen and (max-width: 600px) {
+  .darkMode {
+    background: #171723 url("/assets/bg-mobile-dark.jpg") no-repeat top center;
+  }
+
+  .lightMode {
+    background: #FAFAFA url("/assets/bg-mobile-light.jpg") no-repeat top center;
+  }
+}
