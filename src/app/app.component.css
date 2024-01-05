@@ -20,6 +20,9 @@ body {
   color: #171723
 }
 
+.lightMode .app-footer{
+  background: #fff;
+}
 
 .app-footer {
   background: #25273C;
@@ -30,12 +33,20 @@ body {
   max-width: 100vw;
   width: 100vw;
   z-index: 99;
+  border-top: solid 1px #919191;
 }
 
 .footer-content {
   margin: 0 auto;
-  color: #FAFAFA;
   font-weight: 400;
+}
+
+.lightMode .app-footer a{
+  color: #25273C
+}
+
+.lightMode .app-footer a:hover{
+  color: #3d405d
 }
 
 .footer-content a{
