@@ -1,0 +1,22 @@
+footer{
+  list-style: none;
+  padding: 20px;
+  max-width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 10px 10px;
+}
+
+footer p{
+  margin: 0;
+}
+
+.darkMode footer{
+  background: #25273C;
+}
+
+.lightMode footer{
+  background: #FFFFFF;
+}

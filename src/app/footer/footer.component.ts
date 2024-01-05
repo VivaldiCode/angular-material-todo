@@ -1,12 +1,16 @@
-import {Component, EventEmitter, Input, Output} from '@angular/core';
+import {Component, EventEmitter, Input, Output, ViewEncapsulation} from '@angular/core';
 import {Todo} from "../todo.interface";
+import {MatButtonModule} from "@angular/material/button";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [],
+  imports: [
+    MatButtonModule
+  ],
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.css'
+  styleUrl: './footer.component.css',
+  encapsulation: ViewEncapsulation.None,
 })
 export class FooterComponent {
   @Input() todos: Todo[] | undefined; // Define a Todo interface

@@ -18,6 +18,7 @@ import {Todo} from "./todo.interface";
 export class AppComponent implements OnInit {
   todos: Todo[] = [];
   darkMode: boolean = false;
+  currentFilter: string = 'all';
 
   addTodo(newTodo: Todo) {
     this.todos.push(newTodo);
@@ -59,8 +60,19 @@ export class AppComponent implements OnInit {
   }
 
   setFilter(filter: string) {
-    // Implemente a lógica para filtrar as tarefas com base no filtro escolhido
-    // Pode ser feito definindo uma propriedade no componente e usando-a no ngFor da lista
+    this.currentFilter = filter;
+  }
+
+
+  get filteredTodos(): Todo[] {
+    switch (this.currentFilter) {
+      case 'active':
+        return this.todos.filter(todo => !todo.completed);
+      case 'completed':
+        return this.todos.filter(todo => todo.completed);
+      default:
+        return this.todos;
+    }
   }
 
   updateTodosInCache(updatedTodos: Todo[]) {

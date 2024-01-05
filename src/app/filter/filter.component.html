@@ -1,11 +1,7 @@
-<div>
-  <label>
-    <input type="radio" name="filter" (click)="setFilter('all')" checked> All
-  </label>
-  <label>
-    <input type="radio" name="filter" (click)="setFilter('active')"> Active
-  </label>
-  <label>
-    <input type="radio" name="filter" (click)="setFilter('completed')"> Completed
-  </label>
+<div class="filter">
+  <mat-button-toggle-group [(ngModel)]="currentFilter" name="filter" aria-label="Font Style">
+    <mat-button-toggle (change)="setFilter('all')" value="all">All</mat-button-toggle>
+    <mat-button-toggle (change)="setFilter('active')" value="active">Active</mat-button-toggle>
+    <mat-button-toggle (change)="setFilter('completed')" value="completed">Completed</mat-button-toggle>
+  </mat-button-toggle-group>
 </div>

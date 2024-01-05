@@ -1,0 +1,42 @@
+.filter{
+  list-style: none;
+  margin-top: 30px;
+  padding: 20px;
+  max-width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.darkMode .filter{
+  background: #25273C;
+}
+
+.lightMode .filter{
+  background: #FFFFFF;
+}
+
+.filter .mat-button-toggle-group{
+  border: none;
+  font-weight: 700;
+  margin: 0 auto;
+}
+
+.filter .mat-button-toggle{
+  background-color: transparent;
+  color: hsl(234, 39%, 85%);
+  border: none !important;
+}
+
+.filter .mat-button-toggle:hover * {
+  background-color: transparent !important;
+  color: hsl(220, 98%, 61%) !important;
+  opacity: 1 !important;
+}
+
+.filter .mat-button-toggle-checked {
+  background-color: transparent !important;
+  color: hsl(220, 98%, 61%) !important;
+}

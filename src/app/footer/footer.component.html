@@ -1,4 +1,4 @@
-0<footer>
-  <p>{{ getIncompleteCount() }} items left</p>
-  <button (click)="clearCompletedClick()">Clear Completed</button>
+<footer>
+  <span>{{ getIncompleteCount() }} items left</span>
+  <button mat-flat-button color="warn" (click)="clearCompletedClick()">Clear Completed</button>
 </footer>

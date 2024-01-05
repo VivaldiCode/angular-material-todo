@@ -2,8 +2,8 @@
   <div class="content">
     <app-header [darkMode]="darkMode" (darkModeToggle)="toggleDarkMode()"></app-header>
     <app-form (addTodo)="addTodo($event)"></app-form>
-    <app-list (updateTodosInCache)="updateTodosInCache($event)" [todos]="todos" (deleteTodo)="deleteTodo($event)"></app-list>
+    <app-list (updateTodosInCache)="updateTodosInCache($event)" [todos]="filteredTodos" (deleteTodo)="deleteTodo($event)"></app-list>
     <app-footer [todos]="todos" (clearCompleted)="clearCompleted()"></app-footer>
-    <app-filter (filterChange)="setFilter($event)"></app-filter>
+    <app-filter [currentFilter]="currentFilter" (filterChange)="setFilter($event)"></app-filter>
   </div>
 </main>
