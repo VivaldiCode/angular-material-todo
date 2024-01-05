@@ -16,24 +16,21 @@ import {Todo} from "./todo.interface";
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit {
-  todos: Todo[] = []; // Lista de tarefas
+  todos: Todo[] = [];
   darkMode: boolean = false;
 
   addTodo(newTodo: Todo) {
-    // Implemente a lógica para adicionar uma nova tarefa
     this.todos.push(newTodo);
     this.saveTodosToCache();
   }
 
   deleteTodo(todo: Todo) {
-    // Implemente a lógica para excluir uma tarefa
     this.todos = this.todos.filter(t => t !== todo);
     this.saveTodosToCache();
 
   }
 
   clearCompleted() {
-    // Implemente a lógica para limpar as tarefas concluídas
     this.todos = this.todos.filter(t => !t.completed);
     this.saveTodosToCache();
   }
@@ -66,11 +63,14 @@ export class AppComponent implements OnInit {
     // Pode ser feito definindo uma propriedade no componente e usando-a no ngFor da lista
   }
 
+  updateTodosInCache(updatedTodos: Todo[]) {
+    this.todos = updatedTodos;
+    this.saveTodosToCache();
+  }
 
   ngOnInit() {
     this.loadTodosFromCache();
     const darkModeStorage = localStorage.getItem('darkMode')
     this.darkMode = darkModeStorage === 'true'
-
   }
 }

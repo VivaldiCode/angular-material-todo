@@ -1,10 +1,14 @@
-<ul>
+<ul class="list">
   <li *ngFor="let todo of todos" [class.completed]="todo.completed" appDraggable>
+    <mat-slide-toggle class="toggle" [(ngModel)]="todo.completed" [ngModelOptions]="{standalone: true}"
+                      (change)="onToggleTodoStatus(todo)">
+    </mat-slide-toggle>
     <label>
-      <input type="radio" [(ngModel)]="todo.completed">
       <del *ngIf="todo.completed">{{ todo.text }}</del>
       <span *ngIf="!todo.completed">{{ todo.text }}</span>
     </label>
-    <button (click)="onDeleteTodoClick(todo)">Delete</button>
+    <button matSuffix mat-icon-button aria-label="Clear" (click)="onDeleteTodoClick(todo)">
+      <mat-icon fontIcon="close"></mat-icon>
+    </button>
   </li>
 </ul>
