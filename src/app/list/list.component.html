@@ -1,5 +1,5 @@
-<ul class="list">
-  <li *ngFor="let todo of todos" [class.completed]="todo.completed" appDraggable>
+<ul class="list" cdkDropList (cdkDropListDropped)="onItemDrop($event)">
+  <li *ngFor="let todo of todos" [class.completed]="todo.completed" cdkDrag>
     <mat-slide-toggle class="toggle" [(ngModel)]="todo.completed" [ngModelOptions]="{standalone: true}"
                       (change)="onToggleTodoStatus(todo)">
     </mat-slide-toggle>

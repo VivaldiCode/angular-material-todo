@@ -1,18 +1,21 @@
-.form-task{
+.form-task {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 80px;
   margin-top: 5%;
   padding: 12px;
-  border-radius: 6px
+  border-radius: 6px;
+  -webkit-box-shadow: 6px 3px 19px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 6px 3px 19px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: 6px 3px 19px -1px rgba(0, 0, 0, 0.75);
 }
 
-.darkMode .form-task{
+.darkMode .form-task {
   background: #25273C;
 }
 
-.lightMode .form-task{
+.lightMode .form-task {
   background: #FFFFFF;
 }
 
@@ -25,11 +28,40 @@
   max-height: 100%;
 }
 
+.mat-mdc-form-field .mdc-text-field {
+  background-color: transparent !important;
+  border: none !important;
+  border-radius: 0;
+}
+
+.mat-mdc-form-field .mdc-text-field input {
+  color: #25273C !important;
+  font-size: 32px;
+}
+
+.mat-mdc-form-field .mdc-text-field input::placeholder {
+  color: rgba(37, 39, 60, 0.67) !important;
+  opacity: 1; /* Firefox */
+}
+
+.darkMode .form-task .mat-mdc-text-field-wrapper:hover .mat-mdc-form-field-focus-overlay {
+  background: transparent !important;
+}
+
+.darkMode .form-task .mat-mdc-form-field .mdc-text-field input {
+  color: #FFFFFF !important;
+}
+
+.darkMode .form-task .mat-mdc-form-field .mdc-text-field input::placeholder {
+  color: #FFFFFF !important;
+  opacity: 1; /* Firefox */
+}
+
 .form-field .mat-mdc-form-field-bottom-align {
   display: none;
 }
 
-.form-submit{
+.form-submit {
   /*width: 15%;*/
   font-size: 50px;
 }

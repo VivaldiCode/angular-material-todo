@@ -5,5 +5,16 @@
     <app-list (updateTodosInCache)="updateTodosInCache($event)" [todos]="filteredTodos" (deleteTodo)="deleteTodo($event)"></app-list>
     <app-footer [todos]="todos" (clearCompleted)="clearCompleted()"></app-footer>
     <app-filter [currentFilter]="currentFilter" (filterChange)="setFilter($event)"></app-filter>
+    <div class="hint">
+      <span>Drag and drop to reorder list</span>
+    </div>
+  </div>
+  <div class="app-footer">
+    <div class="footer-content">
+      <span>
+        <a href="https://guilhermepinto.pt/" target="_blank">Guilherme Pinto</a> |
+        <a href="https://github.com/VivaldiCode/angular-material-todo" target="_blank">GitHub</a>
+      </span>
+    </div>
   </div>
 </main>

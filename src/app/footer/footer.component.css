@@ -7,6 +7,11 @@ footer{
   justify-content: space-between;
   align-items: center;
   border-radius: 0 0 10px 10px;
+  -webkit-box-shadow: 6px 11px 19px -1px rgba(0,0,0,0.75);
+  -moz-box-shadow: 6px 11px 19px -1px rgba(0,0,0,0.75);
+  box-shadow: 6px 11px 19px -1px rgba(0,0,0,0.75);
+  position: relative;
+  z-index: 2;
 }
 
 footer p{

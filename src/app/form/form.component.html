@@ -1,7 +1,7 @@
 <form class="form-task" (ngSubmit)="onAddTodoClick()">
   <mat-slide-toggle class="toggle" [(ngModel)]="isCompleted" [ngModelOptions]="{standalone: true}"></mat-slide-toggle>
-  <mat-form-field appearance="fill" hideRequiredMarker="true" class="form-field">
-    <input matInput type="text" [(ngModel)]="newTask" [ngModelOptions]="{standalone: true}" required>
+  <mat-form-field class="form-field">
+    <input matInput placeholder="Create a new task"  type="text" [(ngModel)]="newTask" [ngModelOptions]="{standalone: true}" required>
     @if (newTask) {
       <button matSuffix mat-icon-button aria-label="Clear" (click)="newTask=''">
         <mat-icon fontIcon="close"></mat-icon>

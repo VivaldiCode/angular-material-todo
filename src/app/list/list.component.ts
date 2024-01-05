@@ -6,6 +6,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {MatButtonModule} from "@angular/material/button";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatIconModule} from "@angular/material/icon";
+import {CdkDrag, CdkDragDrop, CdkDropList, moveItemInArray} from "@angular/cdk/drag-drop";
 
 @Component({
   selector: 'app-list',
@@ -16,7 +17,9 @@ import {MatIconModule} from "@angular/material/icon";
     MatSlideToggleModule,
     MatButtonModule,
     MatFormFieldModule,
-    MatIconModule
+    MatIconModule,
+    CdkDropList,
+    CdkDrag
   ],
   templateUrl: './list.component.html',
   styleUrl: './list.component.css',
@@ -34,6 +37,13 @@ export class ListComponent {
 
   onToggleTodoStatus(todo: Todo) {
     this.updateTodosInCache.emit(this.todos);
+  }
+
+  onItemDrop(event: CdkDragDrop<Todo[]>) {
+    if(this.todos){
+      moveItemInArray(this.todos, event.previousIndex, event.currentIndex);
+      this.updateTodosInCache.emit(this.todos);
+    }
   }
 
 }
